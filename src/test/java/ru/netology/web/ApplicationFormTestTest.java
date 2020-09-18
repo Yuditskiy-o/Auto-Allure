@@ -62,6 +62,7 @@ class ApplicationFormTestTest {
 
     @Test
     void shouldNotGiveNewDateWhenInvalidDate() {
+        form.$(cssSelector("[data-test-id=date] input")).sendKeys(date);
         form.$(cssSelector("[name=name]")).sendKeys(name);
         form.$(cssSelector("[name=phone]")).sendKeys(phone);
         form.$(cssSelector("[data-test-id=agreement]")).click();
